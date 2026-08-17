@@ -1,0 +1,49 @@
+:host {
+  display: block;
+}
+
+.cta {
+  padding: clamp(80px, 10vw, 140px) 0;
+  background:
+    radial-gradient(60% 120% at 80% 10%, rgb(110 87 156 / 0.4), transparent 60%),
+    var(--cta-bg);
+  color: var(--cta-ink);
+  text-align: center;
+}
+
+.cta__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta__kicker {
+  margin: 0 0 12px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+
+.cta__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  color: var(--cta-ink);
+}
+
+.cta__text {
+  max-width: 46ch;
+  margin: 18px auto 0;
+  color: rgb(253 247 244 / 0.75);
+}
+
+.cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 38px;
+}
