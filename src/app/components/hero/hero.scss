@@ -27,11 +27,12 @@
   font-size: clamp(3.4rem, 7vw, 6rem);
   line-height: 0.98;
   letter-spacing: 0.01em;
+  color: var(--accent);
 }
 
 .hero__title em {
   font-style: italic;
-  color: var(--accent);
+  color: var(--ink);
 }
 
 .hero__phrase {

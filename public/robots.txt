@@ -1,0 +1,7 @@
+# robots.txt da FN Beauty
+# Página inicial: https://fn-beauty.vercel.app/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://fn-beauty.vercel.app/sitemap.xml

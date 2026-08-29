@@ -1,0 +1,27 @@
+# FN Beauty
+
+> Estúdio de beleza especializado em design de sobrancelhas, lash lifting e maquiagem, com atendimento personalizado e acabamento delicado.
+
+A FN Beauty é um espaço de beleza focado em realçar a beleza natural de cada cliente. São oferecidos serviços de sobrancelhas, lash lifting e maquiagem para eventos, com atendimento individualizado, escuta do desejo de cada pessoa, uso de produtos profissionais certificados e protocolos rigorosos de higiene e biossegurança.
+
+## Serviços
+
+- [Sobrancelhas](https://fn-beauty.vercel.app/#servicos): Design personalizado que harmoniza o olhar, incluindo desenho, correção, coloração e brown lumination com acabamento natural, respeitando o formato do rosto.
+- [Lash Lifting](https://fn-beauty.vercel.app/#servicos): Lifting que levanta e realça os cílios naturais, curvando o olhar com leveza e resultado delicado e duradouro.
+- [Maquiagem](https://fn-beauty.vercel.app/#servicos): Maquiagem social e para eventos, do leve ao sofisticado, com pele bem feita, acabamento delicado e longa duração.
+
+## Sobre
+
+A profissional por trás da FN Beauty é apaixonada por realçar a beleza real de cada pessoa. Com formação e constante atualização em sobrancelhas, lash lifting e maquiagem, transforma cada atendimento em uma experiência única de cuidado e autoconfiança.
+
+## Diferenciais
+
+- Atendimento personalizado: cada rosto é único e o serviço é desenhado sob medida para cada pessoa.
+- Acabamento delicado: traços precisos, efeito fio a fio, resultado leve, natural e impecável.
+- Produtos de qualidade: materiais e produtos profissionais, certificados e seguros para pele e fios.
+- Higiene e biossegurança: materiais descartáveis, esterilização e protocolos rigorosos.
+
+## Contato e agendamento
+
+- WhatsApp: https://wa.me/5551995172451
+- Instagram: https://www.instagram.com/fernandanonnemacher_beauty
