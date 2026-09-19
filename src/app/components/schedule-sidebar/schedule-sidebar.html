@@ -1,0 +1,107 @@
+<div class="schedule-backdrop" [class.schedule-backdrop--open]="isOpen()" (click)="close()"></div>
+<aside
+  class="schedule-panel"
+  [class.schedule-panel--open]="isOpen()"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="schedule-title"
+  [attr.aria-hidden]="!isOpen()"
+>
+  <button class="schedule-panel__close" type="button" (click)="close()" aria-label="Fechar">
+    &times;
+  </button>
+  <p class="schedule-panel__kicker">FN Beauty</p>
+  <h2 id="schedule-title" class="schedule-panel__title">Agende seu horário</h2>
+  <p class="schedule-panel__text">
+    Escolha a data de preferência. Você será direcionado para o WhatsApp para finalizar o
+    agendamento.
+  </p>
+
+  <div class="schedule-panel__field">
+    <label class="schedule-panel__label" for="schedule-date">Data desejada</label>
+    <button
+      id="schedule-date"
+      class="schedule-panel__date-trigger"
+      type="button"
+      [attr.aria-expanded]="dropdownOpen()"
+      (click)="toggleDropdown()"
+    >
+      <span [class.schedule-panel__date--placeholder]="!selectedDate()">
+        {{ selectedDate() ? formatDate(selectedDate()) : 'Selecione a data' }}
+      </span>
+      <svg
+        class="schedule-panel__date-icon"
+        viewBox="0 0 24 24"
+        width="18"
+        height="18"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        aria-hidden="true"
+      >
+        <rect x="3" y="4" width="18" height="17" rx="3" />
+        <path d="M3 9h18" />
+        <path d="M8 2v4M16 2v4" />
+      </svg>
+    </button>
+
+    @if (dropdownOpen()) {
+      <div class="schedule-calendar">
+        <div class="schedule-calendar__header">
+          <button
+            class="schedule-calendar__nav"
+            type="button"
+            aria-label="Mês anterior"
+            (click)="prevMonth()"
+          >
+            &lsaquo;
+          </button>
+          <span class="schedule-calendar__month">{{ monthLabel() }}</span>
+          <button
+            class="schedule-calendar__nav"
+            type="button"
+            aria-label="Próximo mês"
+            (click)="nextMonth()"
+          >
+            &rsaquo;
+          </button>
+        </div>
+        <div class="schedule-calendar__weekdays">
+          @for (day of weekdays; track day) {
+            <span class="schedule-calendar__weekday">{{ day }}</span>
+          }
+        </div>
+        <div class="schedule-calendar__grid">
+          @for (cell of days(); track cell.key) {
+            @if (cell.date; as date) {
+              <button
+                class="schedule-calendar__day"
+                type="button"
+                [class.schedule-calendar__day--selected]="isSelected(date)"
+                [class.schedule-calendar__day--today]="isToday(date)"
+                [disabled]="isDisabled(date)"
+                (click)="select(date)"
+              >
+                {{ date.getDate() }}
+              </button>
+            } @else {
+              <span
+                class="schedule-calendar__day schedule-calendar__day--empty"
+                aria-hidden="true"
+              ></span>
+            }
+          }
+        </div>
+      </div>
+    }
+  </div>
+
+  <button
+    class="btn btn--primary schedule-panel__confirm"
+    type="button"
+    [disabled]="!selectedDate()"
+    (click)="confirm()"
+  >
+    Agendar pelo WhatsApp
+  </button>
+</aside>
