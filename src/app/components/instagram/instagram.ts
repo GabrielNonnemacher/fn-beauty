@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ScheduleService } from '../../services/schedule.service';
 
 @Component({
   selector: 'app-instagram',
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './instagram.html',
   styleUrl: './instagram.scss',
 })
-export class Instagram {}
+export class Instagram {
+  private schedule = inject(ScheduleService);
+
+  openSchedule(): void {
+    this.schedule.open();
+  }
+}
